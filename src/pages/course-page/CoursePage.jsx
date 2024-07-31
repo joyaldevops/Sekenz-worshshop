@@ -1,4 +1,4 @@
-//  Courses Page
+//  Create sample
 
 import React from "react";
 import { FaSearch } from "react-icons/fa";
