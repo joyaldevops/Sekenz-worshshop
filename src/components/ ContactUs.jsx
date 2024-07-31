@@ -1,4 +1,4 @@
-<!-- From New Branch -->
+//  Contact Page
 
 import React, { useState } from 'react';
 import upgrad from '../assets/upgrad.png';
