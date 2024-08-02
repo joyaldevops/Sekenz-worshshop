@@ -1,4 +1,4 @@
-//  Create sample
+//  Courses Pages
 
 import React from "react";
 import { FaSearch } from "react-icons/fa";
@@ -133,13 +133,13 @@ const CoursePage = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4">ADMISSION ‘24</h1>
-          <h2 className="text-red-600 text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 sm:p-8">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4">ADMISSION ‘24</h1>
+          <h2 className="text-red-600 text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2">
             Your bright future is
           </h2>
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-8">our mission</h2>
-          <div className="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 bg-white rounded-full flex items-center pr-1 pl-2 py-1 shadow-lg">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-8">our mission</h2>
+          <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-white rounded-full flex items-center pr-1 pl-2 py-1 shadow-lg">
             <FaSearch className="text-gray-500 mr-2" />
             <input
               type="text"
@@ -154,9 +154,9 @@ const CoursePage = () => {
       </div>
 
       <div className="bg-black flex flex-col items-center justify-center text-center py-16 px-4 sm:px-8 md:px-16 lg:px-24">
-        <h1 className="text-white mb-6 text-3xl sm:text-4xl md:text-5xl">ABOUT US</h1>
-        <h2 className="font-bold text-white text-2xl sm:text-3xl md:text-4xl">Welcome to</h2>
-        <h2 className="text-red-600 text-2xl sm:text-3xl md:text-4xl mb-6">upGrad Kollam</h2>
+        <h1 className="text-white mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl">ABOUT US</h1>
+        <h2 className="font-bold text-white text-xl sm:text-2xl md:text-3xl">Welcome to</h2>
+        <h2 className="text-red-600 text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6">upGrad Kollam</h2>
         <p className="text-white w-full sm:w-3/4 lg:w-2/3 text-left">
           upGrad is the overseas education division of Asia’s leading integrated
           learning, skilling, and workforce development company. Their mission
@@ -171,38 +171,38 @@ const CoursePage = () => {
         </button>
       </div>
 
-      <div className="bg-rose-50 py-10 px-6 sm:px-8 md:px-16 lg:px-20">
+      <div className="bg-rose-50 py-10 px-4 sm:px-8 md:px-16 lg:px-20">
         <div className="mb-6 text-center">
-          <h1 className="text-black text-3xl sm:text-4xl md:text-5xl">FEATURED COURSES</h1>
+          <h1 className="text-black text-2xl sm:text-3xl md:text-4xl">FEATURED COURSES</h1>
         </div>
         <div className="mb-10 text-center">
-          <p className="text-xl font-bold">
+          <p className="text-lg sm:text-xl font-bold">
             We’re here to <span className="text-red-500">help</span> you
           </p>
-          <p className="text-xl font-bold">build your career</p>
+          <p className="text-lg sm:text-xl font-bold">build your career</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cardData.map((card) => (
-            <div key={card.id} className="bg-white rounded-[50px]">
+            <div key={card.id} className="bg-white rounded-[30px] md:rounded-[50px] shadow-lg">
               <div className="flex flex-col h-full justify-between">
                 <div>
                   <img
                     src={card.image}
                     alt={card.imageTitle}
-                    className="rounded-t-[50px] h-52 w-full object-cover mb-4 mx-auto"
+                    className="rounded-t-[30px] md:rounded-t-[50px] h-52 w-full object-cover mb-4"
                   />
-                  <h2 className="text-red-500 font-bold text-center mb-6">
+                  <h2 className="text-red-500 font-bold text-center mb-2 sm:mb-4">
                     {card.imageTitle}
                   </h2>
-                  <h3 className="text-black font-bold text-center mb-6">
+                  <h3 className="text-black font-bold text-center mb-2 sm:mb-4">
                     {card.courseTitle}
                   </h3>
-                  <p className="text-black text-center mx-2 mb-6">{card.description}</p>
+                  <p className="text-black text-center mx-2 mb-2 sm:mb-4">{card.description}</p>
                 </div>
 
                 <div className="flex items-center m-4 justify-center space-x-6">
-                  <button className="bg-red-600 text-white rounded-[50px] px-8 py-1">
+                  <button className="bg-red-600 text-white rounded-full px-4 py-1 sm:px-8 sm:py-2">
                     Apply
                   </button>
 
@@ -210,7 +210,7 @@ const CoursePage = () => {
                     <span className="font-bold"> {card.duration}</span>
                     <span> {card.course}</span>
                   </div>
-                  <div className="border-l-2 border-black h-9 mx-4 my-auto"></div>
+                  <div className="border-l-2 border-black h-9 mx-2 md:mx-4 my-auto"></div>
 
                   <div className="text-black flex flex-col items-center">
                     <span className="font-bold"> {card.type}</span>
@@ -223,19 +223,28 @@ const CoursePage = () => {
         </div>
       </div>
 
-      <section className="bg-black h-[50vh] flex flex-col justify-center items-center text-center">
-        <div className="mb-4 pt-10">
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">YOUR BRIGHT FUTURE</h1>
-          <h2 className="text-red-500 text-2xl sm:text-3xl md:text-4xl font-semibold">IS OUR MISSION</h2>
-        </div>
-        <div className="w-full flex justify-center">
-          <div className="border-2 border-white w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2">
-            <YouTube className="w-full" videoId={videoUrl} />
-          </div>
-        </div>
-      </section>
+      <section className="bg-black min-h-[80vh] flex flex-col justify-center items-center text-center p-4">
+  <div className="mb-4 pt-10">
+    <h1 className="text-white text-xl sm:text-2xl md:text-3xl font-bold">YOUR BRIGHT FUTURE</h1>
+    <h2 className="text-red-500 text-xl sm:text-2xl md:text-3xl font-semibold">IS OUR MISSION</h2>
+  </div>
+  <div className="w-full max-w-3xl border-2 border-white">
+    <div className="relative pb-[56.25%] h-0">
+      <YouTube 
+        className="absolute top-0 left-0 w-full h-full"
+        videoId={videoUrl}
+        opts={{
+          width: '100%',
+          height: '100%'
+        }}
+      />
+    </div>
+  </div>
+</section>
     </>
   );
 };
 
 export default CoursePage;
+
+
